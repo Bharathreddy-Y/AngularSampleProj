@@ -1,0 +1,51 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.main-div{
+    height: 100%;
+    width: 100%;
+}
+.header-main-div{
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    height: 4rem;
+    width: 100%;
+    background-color: aqua;
+}
+.header-main-div h2{
+    text-align: center;
+}
+.main-router-outlet-section{
+    display: flex;
+    flex-direction: row;
+    height: 91.5%;
+    width: 100%;
+    background-color: orange;
+}
+.side-bar-router-outlet-section{
+    height: 100%;
+    width:20%;
+    background-color: rgb(251, 255, 0);
+}
+.side-bar-router-outlet-sub-section{
+    position: relative;
+    top: 5rem;
+}
+.side-bar-router-outlet-sub-section h4{
+    margin-top: 1rem;
+    padding: 0.7rem;
+    cursor: pointer;
+}
+.main-bar-router-outlet-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.main-bar-router-outlet-sub-section{
+
+}

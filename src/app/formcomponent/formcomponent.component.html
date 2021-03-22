@@ -1,0 +1,17 @@
+<!-- The bellow code is a example reactive form with number validation -->
+<form [formGroup]="userform">
+    <label>Mobile Number</label><br>
+    <input type="text" formControlName="id" (keyup)="check()"/><span>{{checkNumber.message ? "please Enter Number":""}}</span><br>
+    <label>Name</label><br>
+    <input type="text" formControlName="name"><span *ngIf="!userform.controls.name?.valid && userform.controls.name?.touched">Maximum Value is 10</span><br>
+    <label>email</label><br>
+    <input type="text" formControlName="email"><span *ngIf="!userform.controls.email?.valid && userform.controls.email?.touched">Email is not valid</span><br>
+    <button (click)="submit()" [disabled]="!userform.valid">submit</button>
+</form>
+<!-- the bellow line of interpolation gives the single value which is email -->
+<!-- <h3>{{email.value}}</h3> -->
+<!-- the bellow code display's the array of the user's submitted form -->
+<h3>stored array</h3>
+<ul *ngFor="let data of empDataExample.array">
+    <li>{{data.id}} - {{data.name}} - {{data.email}}<button (click)="edit(data.id)">Edit</button><button (click)="delete(data.id)">Delete</button></li>
+</ul>
